@@ -1,0 +1,203 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    /* background: black; */
+    box-sizing:border-box;
+    font-family: 'Lobster', cursive;
+font-family: 'Ubuntu', sans-serif
+}
+
+/* Navigation Bar  */
+
+.navbar{
+    display: flex;
+    position: sticky;
+    top:0px;
+    /* justify-content:space-between ; */
+    border-bottom: 0.001em solid;
+
+}
+
+.navbar::before{
+    content:"";
+    /* background: rgb(163, 163, 163); */
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.navbar img{
+    width: 40px;
+    height: 40px;
+    margin: 1rem 1.25rem 1rem 1.25rem;
+    padding: 2px;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 0.5rem 1.25rem;
+    text-decoration: none;
+    /* position: absolute;
+    z-index: 10; */
+}
+
+.navbar ul li{
+    margin: 1.25rem;
+    color:black;
+    transition: 0.2s ;
+}
+
+.navbar ul li:hover{
+    color: rgb(255, 255, 255);
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #5271ff,
+      0 0 82px #5271ff,
+      0 0 92px #5271ff,
+      0 0 102px #5271ff,
+      0 0 151px #5271ff;
+
+}
+
+.nav-content{
+    display: flex;
+    width: 45vw;
+    /* margin:0 0 0 1.5em; */
+    justify-content: space-around;
+}
+a{
+    cursor: pointer;
+}
+
+/* Main of the body  */
+
+.main{
+    display: flex;
+    /* position: absolute; */
+    width: 100vw;
+    height: 574.2px;
+    z-index: 100;
+}
+
+.main::before{
+    content: " ";
+    background: url(../images/home.jpg) no-repeat center center/cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 647px;
+    z-index: -1;
+    opacity: 0.8;
+
+} 
+
+/* main's content */
+
+.maintext{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em;
+    padding: 2rem 2rem;
+    animation: hometext 3s none 0s 1 normal;
+
+}
+
+.img-main{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mainimg{
+    height: 100%;
+    width: 50%;
+    background-image: url(../images/backg.png);
+    /* background-color: #5271ff; */
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    background-size: 133% 201.3%;
+    background-position: 28% 42.6%;
+    animation: homeimg 2.5s none 0s 1 normal;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+   transition: 2s;
+}
+
+.animationhome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+/* animation for home for image  */
+@keyframes homeimg{
+  0%{
+      top:0px;
+      left: 0px;
+      opacity: 0;
+  }
+  100%{
+      top:0px;
+      left: 50%;
+      opacity: 1;
+  }
+}
+
+@keyframes hometext{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* utility class */
+@keyframes color-change {
+    0% { color: rgba(255, 0, 0, 0.347); }
+    50% { color: rgba(0, 0, 255, 0.373); }
+    100% { color: rgba(255, 0, 0, 0.349); }
+  }
+
+.h1-primary{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 5.625rem;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin: 1.5rem;
+    font-size: 60px;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(225, 221, 221, 0.02));
+
+}
+.h1-secondary{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 5.625rem;
+    text-align: center;
+    margin: 1.5rem;
+    font-size: 60px;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(156, 155, 155, 0.077));
+}
+
+
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  } 
